@@ -21,7 +21,7 @@ public class CartController {
 	}
 
 	@RequestMapping(value = "save", method = RequestMethod.POST)
-	public ModelAndView saveAuthorDetails(@ModelAttribute("product") Cart cart) {
+	public ModelAndView saveAuthorDetails(@ModelAttribute("cart") Cart cart) {
 		cartDAO.saveCartDetails(cart);
 		return new ModelAndView("redirect:/index.jsp");
 	}
