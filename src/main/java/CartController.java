@@ -31,7 +31,7 @@ public class CartController {
 		List<Cart> cartList = cartDAO.getCartDetails();
 		
 //		change view to corresponding jsp
-		return new ModelAndView("view", "authorList", cartList);
+		return new ModelAndView("view", "cartList", cartList);
 	}
 
 	

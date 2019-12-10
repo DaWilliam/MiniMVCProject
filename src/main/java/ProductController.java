@@ -33,7 +33,7 @@ public class ProductController {
 		List<Product> catList = productDAO.findByCategory(category);
 		
 //		change view to corresponding jsp
-		return new ModelAndView("view", "authorList", catList);
+		return new ModelAndView("view", "catList", catList);
 	}
 
 	@RequestMapping("viewByName")
@@ -41,6 +41,6 @@ public class ProductController {
 		List<Product> nameList = productDAO.findByName(name);
 		
 //		change view to corresponding jsp	
-		return new ModelAndView("view", "authorList", nameList);
+		return new ModelAndView("view", "nameList", nameList);
 	}
 }
