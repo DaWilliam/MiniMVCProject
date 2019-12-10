@@ -1,0 +1,16 @@
+	create table products(
+	 id int,
+     productName varchar(50),
+	 description varchar(50),
+     quantity int(50),
+     price double,
+     productCategory varchar(50));
+    
+    
+	create table cart(
+	 id int,
+     productName varchar(50),
+	 description varchar(50),
+     quantity int(50),
+     price double,
+     productCategory varchar(50));
