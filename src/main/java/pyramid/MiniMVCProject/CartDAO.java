@@ -21,14 +21,12 @@ public class CartDAO {
         this.jt = jt;
     }
 
-    public int saveCartDetails(Cart cart){
-        return jt.update("insert into products values(" + cart.getId() + ", '" + cart.getName() + "', '" + cart.getDescription() 
-		+ ", " + cart.getQuantity() + ", '" + cart.getCategory() + "')");
+    public int saveCartDetails(Product product){
+        return jt.update("insert into cart values(" + product.getId() + ", '" + product.getName() + "', '" + product.getDescription() 
+		+ "' , " + product.getQuantity() + ", " + product.getPrice() + ", '" + product.getCategory() + "')");
 
     }
-
-       
-    
+          
     public List<Cart> getCartDetails(){
         return jt.query("select * from cart", new RowMapper<Cart>() {
 

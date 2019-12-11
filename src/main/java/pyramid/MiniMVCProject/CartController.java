@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class CartController {
-	
+	/*
 	@Autowired
 	CartDAO cdao;
 	
@@ -19,7 +19,12 @@ public class CartController {
 	{
 		cdao.saveCartDetails(cart);
 	}
-	
+		
+	@RequestMapping(value = "add_product/{id}/{name}/{description}/{quantity}/{price}/{category}", method=RequestMethod.POST)
+	public void saveCartItem(Cart cart)
+	{
+		cdao.saveCartDetails(cart);
+	}	
 	
 	@RequestMapping("/cart")
 	public ModelAndView getProducts()
@@ -27,5 +32,5 @@ public class CartController {
 		List<Cart> clist = cdao.getCartDetails();
 		return new ModelAndView("cart", "cartList", clist);
 	}
-	
+	*/
 }
