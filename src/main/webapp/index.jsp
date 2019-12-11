@@ -37,12 +37,12 @@
 
 		function to_search_products()
 		{
-			location.href = "add";
+			location.href = "cart";
 		}
 		
 		function to_cart()
 		{
-			location.href = "add";
+			location.href = "cart";
 		}
     </script>
 </body>

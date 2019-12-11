@@ -6,20 +6,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<meta charset="ISO-8859-1">
+
 <title>Cart</title>
 </head>
 <body class="text-center">
 	<h1>Cart List</h1>
-	<c:forEach var="cart" items="${cartlist}">
+	<c:forEach var="cart" items="${cartList}">
 		<div class="row">
 			<div class="col">
 			Name: ${cart.name} Description: ${cart.description} Price: ${cart.price}
-			<button onclick="saveItem(${cart.id})" type="button" class="btn btn-default">Add</button>
+			
 			</div>
 		</div>
 	</c:forEach>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<button onclick="window.location = 'index.jsp'" type="button" class="btn btn-default">Back</button>
+				<button onclick="window.location = 'confirmation'" type="button" class="btn btn-default">Confirm</button>
+			</div>
+		</div>
+	</div>
 	
 	<script>
 	function saveItem(var id)

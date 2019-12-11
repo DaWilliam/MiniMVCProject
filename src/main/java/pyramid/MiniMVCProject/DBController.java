@@ -22,11 +22,12 @@ public class DBController {
 		
 	@RequestMapping(value = "add_product/{id}/{quantity}", method=RequestMethod.GET)
 	@ResponseBody
-	public void saveCartItem(@PathVariable("id") int id, @PathVariable("quantity") int quantity)
+	public ModelAndView saveCartItem(@PathVariable("id") int id, @PathVariable("quantity") int quantity)
 	{
 		Product p = pdao.findById(id).get(0);
 		p.setQuantity(5);
 		cdao.saveCartDetails(p);
+		return new ModelAndView("redirect:/products");
 	}	
 	
 	@RequestMapping("/cart")
@@ -34,6 +35,12 @@ public class DBController {
 	{
 		List<Cart> clist = cdao.getCartDetails();
 		return new ModelAndView("cart", "cartList", clist);
+	}
+	
+	@RequestMapping("/confirmation")
+	public void confirmSale()
+	{
+		//	TODO clear cart
 	}
 	
 	@RequestMapping("/products")
