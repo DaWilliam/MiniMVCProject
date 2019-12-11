@@ -20,6 +20,7 @@
 			Name: ${product.name} Description: ${product.description} Price: <fmt:formatNumber type="currency" value="${product.price}" />
 			<button onclick="window.location = 'add_product/ + ${product.id}/${product.quantity}'" type="button" class="btn btn-default">Add</button>
 
+
 			</div>
 		</div>
 	</c:forEach>

@@ -10,7 +10,7 @@
    <context:component-scan base-package="pyramid.MiniMVCProject" />
    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
    	  <property name="prefix" value="/WEB-INF/jsp/"></property>
-   	  <property name="suffix" value=".jsp"></property>
+   	  <property name="suffix" value=".jsp"></property> 
    </bean>	   
    
    <bean id="db"
@@ -32,4 +32,6 @@
    <bean id="cart" class="pyramid.MiniMVCProject.CartDAO">
    		<property name="jdbc" ref="jt"></property>
    </bean>
+   
+   
 </beans>

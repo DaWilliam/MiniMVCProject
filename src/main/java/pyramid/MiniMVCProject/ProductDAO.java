@@ -22,7 +22,7 @@ public class ProductDAO {
 
     public int saveProductDetails(Product prod){
         return jt.update("insert into products values(" + prod.getId() + ", '" + prod.getName() + "', '" + prod.getDescription() 
-        						+ ", " + prod.getQuantity() + ", '" + prod.getCategory() + "')");
+        						+ ", " + prod.getQuantity() + "," + prod.getPrice() + ", '" + prod.getCategory() + "')");
     }
     
     
