@@ -7,7 +7,7 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
-   <context:component-scan base-package="pyramid.SpringMVC2" />
+   <context:component-scan base-package="pyramid.MiniMVCProject" />
    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
    	  <property name="prefix" value="/WEB-INF/jsp/"></property>
    	  <property name="suffix" value=".jsp"></property>
@@ -16,7 +16,7 @@
    <bean id="db"
    class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/hr" />
+		<property name="url" value="jdbc:mysql://localhost:3306/test1" />
 		<property name="username" value="root" />
 		<property name="password" value="password" />
    </bean>
@@ -25,7 +25,11 @@
    		<property name="dataSource" ref="db" />
    </bean>
    
-   <bean id="author" class="pyramid.SpringMVC2.AuthorDAO">
+   <bean id="product" class="pyramid.MiniMVCProject.ProductDAO">
+   		<property name="jdbc" ref="jt"></property>
+   </bean>
+   
+   <bean id="cart" class="pyramid.MiniMVCProject.CartDAO">
    		<property name="jdbc" ref="jt"></property>
    </bean>
 </beans>

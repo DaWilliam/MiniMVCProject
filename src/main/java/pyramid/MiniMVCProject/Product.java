@@ -1,21 +1,24 @@
+package pyramid.MiniMVCProject;
 
 public class Product {
 	private int id;
 	private String name;
 	private String description;
 	private int quantity;
+	double price;
 	private String category;
 	
 	public Product() {
 		
 	}
 	
-	public Product(int id, String name, String description, int quantity, String category) {
+	public Product(int id, String name, String description, int quantity, double price, String category) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.quantity = quantity;
+		this.price = price;
 		this.category = category;
 	}
 	
@@ -48,6 +51,14 @@ public class Product {
 	}
 	public void setCategory(String category) {
 		this.category = category;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
 	}
 	
 	
