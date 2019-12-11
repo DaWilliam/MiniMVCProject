@@ -1,3 +1,4 @@
+package pyramid.MiniMVCProject;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -36,7 +37,8 @@ public class ProductDAO {
                 p.setName(rs.getString(2));
                 p.setDescription(rs.getString(3));
                 p.setQuantity(rs.getInt(4));
-                p.setCategory(rs.getString(5));
+                p.setPrice(rs.getDouble(5));
+                p.setCategory(rs.getString(6));
                 
                 return p;
             
@@ -55,7 +57,8 @@ public class ProductDAO {
                 p.setName(rs.getString(2));
                 p.setDescription(rs.getString(3));
                 p.setQuantity(rs.getInt(4));
-                p.setCategory(rs.getString(5));
+                p.setPrice(rs.getDouble(5));
+                p.setCategory(rs.getString(6));
                 
                 return p;
             
@@ -73,7 +76,8 @@ public class ProductDAO {
                 p.setName(rs.getString(2));
                 p.setDescription(rs.getString(3));
                 p.setQuantity(rs.getInt(4));
-                p.setCategory(rs.getString(5));
+                p.setPrice(rs.getDouble(5));
+                p.setCategory(rs.getString(6));
                 
                 return p;
             

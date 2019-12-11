@@ -1,3 +1,4 @@
+package pyramid.MiniMVCProject;
 
 public class Cart {
 
@@ -5,18 +6,20 @@ public class Cart {
 	private String name;
 	private String description;
 	private int quantity;
+	double price;
 	private String category;
 	
 	public Cart() {
 		
 	}
 	
-	public Cart(int id, String name, String description, int quantity, String category) {
+	public Cart(int id, String name, String description, int quantity, double price, String category) {
 		
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.quantity = quantity;
+		this.price = price;
 		this.category = category;
 	}
 	
@@ -50,4 +53,14 @@ public class Cart {
 	public void setCategory(String category) {
 		this.category = category;
 	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	
 }
