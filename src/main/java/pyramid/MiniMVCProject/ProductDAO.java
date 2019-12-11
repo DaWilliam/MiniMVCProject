@@ -66,6 +66,29 @@ public class ProductDAO {
 		});
     }
 
+    
+    
+    public List<Product> findById(int id){
+    	String query = "select * from products where id = " + id;
+        return jt.query(query, new RowMapper<Product>() {
+
+			public Product mapRow(ResultSet rs, int rowNum) throws SQLException {
+				// TODO Auto-generated method stub
+				Product p  = new Product();
+                p.setId(rs.getInt(1));
+                p.setName(rs.getString(2));
+                p.setDescription(rs.getString(3));
+                p.setQuantity(rs.getInt(4));
+                p.setPrice(rs.getDouble(5));
+                p.setCategory(rs.getString(6));
+                
+                return p;
+            
+			}
+		});
+    }
+
+    
     public List<Product> getProductDetails(){
         return jt.query("select * from products", new RowMapper<Product>() {
 
