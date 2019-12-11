@@ -26,7 +26,11 @@ public class CartDAO {
 		+ "' , " + product.getQuantity() + ", " + product.getPrice() + ", '" + product.getCategory() + "')");
 
     }
-          
+
+    public int deleteCart() {
+    	return jt.update("delete from cart where id > -1");
+    }
+
     public List<Cart> getCartDetails(){
         return jt.query("select * from cart", new RowMapper<Cart>() {
 
