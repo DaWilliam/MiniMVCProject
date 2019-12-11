@@ -20,12 +20,12 @@ public class DBController {
 	ProductDAO pdao;
 	
 		
-	@RequestMapping(value = "add_product/{id}/{quantity}", method=RequestMethod.GET)
+	@RequestMapping(value = "add_product/{id}", method=RequestMethod.GET)
 	@ResponseBody
-	public void saveCartItem(@PathVariable("id") int id, @PathVariable("quantity") int quantity)
+	public void saveCartItem(@PathVariable("id") int id)
 	{
-		Product p = pdao.getProductDetails().get(id - 1);
-		p.setQuantity(quantity);
+		Product p = pdao.findById(id).get(0);
+		//p.setQuantity(quantity);
 		cdao.saveCartDetails(p);
 	}	
 	
