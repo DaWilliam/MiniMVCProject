@@ -25,7 +25,6 @@ public class ProductDAO {
         						+ ", " + prod.getQuantity() + "," + prod.getPrice() + ", '" + prod.getCategory() + "')");
     }
     
-    
     public List<Product> findByCategory(String category){
     	String query = "select * from products where category = '" + category + "'";
         return jt.query(query, new RowMapper<Product>() {
@@ -66,8 +65,6 @@ public class ProductDAO {
 		});
     }
 
-    
-    
     public List<Product> findById(int id){
     	String query = "select * from products where id = " + id;
         return jt.query(query, new RowMapper<Product>() {

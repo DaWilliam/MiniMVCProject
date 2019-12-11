@@ -43,7 +43,7 @@ public class DBController {
 		return new ModelAndView("products", "productlist", plist);
 	}
 	
-	@RequestMapping(value="getProduct", method=RequestMethod.GET)
+	@RequestMapping(value="/getProduct", method=RequestMethod.GET)
 	public ModelAndView getProduct(String prodName)
 	{
 		Product p = pdao.findByName(prodName).get(0);
@@ -51,4 +51,10 @@ public class DBController {
 		return new ModelAndView("products", "cartItem", cartItem);
 	}
 	
+	@RequestMapping(value="findProducts", method=RequestMethod.GET)
+	public ModelAndView getProductByCategory(String category)
+	{
+		List<Product> p = pdao.findByCategory(category);
+		return new ModelAndView("products", "productlist", p);
+	}
 }
