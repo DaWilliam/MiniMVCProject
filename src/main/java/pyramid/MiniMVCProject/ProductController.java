@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ProductController {
-	/*
+	
 	@Autowired
 	ProductDAO pdao;
 	
@@ -28,6 +28,6 @@ public class ProductController {
 		Cart cartItem = new Cart(p.getId(), p.getName(), p.getDescription(), p.getQuantity(), p.getPrice(), p.getCategory());
 		return new ModelAndView("products", "cartItem", cartItem);
 	}
-	*/
+	
 	
 }

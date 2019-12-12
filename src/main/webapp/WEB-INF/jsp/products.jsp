@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>  
 
 <!DOCTYPE html>
 <html>
@@ -16,8 +17,10 @@
 		<div class="row">
 			<div class="col">
 
-			Name: ${product.name} Description: ${product.description} Price: ${product.price}
+			Name: ${product.name} Description: ${product.description} Price: <fmt:formatNumber type="currency" value="${product.price}" />
 			<button onclick="window.location = 'add_product/ + ${product.id}/${product.quantity}'" type="button" class="btn btn-default">Add</button>
+
+
 			</div>
 		</div>
 	</c:forEach>
