@@ -20,12 +20,12 @@ public class DBController {
 	ProductDAO pdao;
 	
 		
-	@RequestMapping(value = "add_product/{id}/{quantity}", method=RequestMethod.GET)
+	@RequestMapping(value = "add_product/{id}", method=RequestMethod.GET)
 	@ResponseBody
-	public ModelAndView saveCartItem(@PathVariable("id") int id, @PathVariable("quantity") int quantity)
+	public ModelAndView saveCartItem(@PathVariable("id") int id, @RequestParam("quantity") int quantity)
 	{
 		Product p = pdao.findById(id).get(0);
-		p.setQuantity(5);
+		p.setQuantity(quantity);
 		cdao.saveCartDetails(p);
 		return new ModelAndView("redirect:/products");
 	}	

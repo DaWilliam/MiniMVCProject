@@ -17,9 +17,18 @@
 		<div class="row">
 			<div class="col">
 
+			<form action="add_product/${product.id}" method="GET">
 			Name: ${product.name} Description: ${product.description} Price: <fmt:formatNumber type="currency" value="${product.price}" />
-			<button onclick="window.location = 'add_product/ + ${product.id}/${product.quantity}'" type="button" class="btn btn-default">Add</button>
-
+			<select name="quantity">
+				<option value=1>1</option>
+				<option value=2>2</option>
+				<option value=3>3</option>
+				<option value=4>4</option>
+				<option value=5>5</option>
+			</select>
+			<input type="submit" value="Add" />
+			<!-- <button onclick="window.location = 'add_product/ + ${product.id}'" type="button" class="btn btn-default">Add</button>  -->
+			</form>
 
 			</div>
 		</div>

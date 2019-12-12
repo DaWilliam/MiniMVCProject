@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-@Controller
+//@Controller
 public class ProductController {
-	
+	/*
 	@Autowired
 	ProductDAO pdao;
 	
@@ -28,6 +28,6 @@ public class ProductController {
 		Cart cartItem = new Cart(p.getId(), p.getName(), p.getDescription(), p.getQuantity(), p.getPrice(), p.getCategory());
 		return new ModelAndView("products", "cartItem", cartItem);
 	}
-	
+	*/
 	
 }
