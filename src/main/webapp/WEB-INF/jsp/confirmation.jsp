@@ -12,5 +12,6 @@
 	<h1>Order Confirmed</h1>
 	<h4>Will be there eventually.</h4>
 	<h6>No refunds.</h6>
+	<button onclick="window.location = 'index.jsp'" type="button" class="btn btn-default">Continue</button>
 </body>
 </html>

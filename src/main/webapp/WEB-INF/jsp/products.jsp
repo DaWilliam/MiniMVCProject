@@ -12,25 +12,33 @@
 <title>Products</title>
 </head>
 <body class="text-center">
-	<h1>Product List</h1>
+	<div class="row">
+		<div class="col text-left" style="padding-left: 20px">
+			<button onclick="window.location = 'index.jsp'" type="button" class="btn btn-default">Back</button>
+		</div>
+		<div class="col">
+			<h1>Product List</h1>
+		</div>
+	</div>
 	<c:forEach var="product" items="${productlist}">
+		<div class="container">
 		<div class="row">
 			<div class="col">
-
-			<form action="add_product/${product.id}" method="GET">
-			Name: ${product.name} Description: ${product.description} Price: <fmt:formatNumber type="currency" value="${product.price}" />
-			<select name="quantity">
-				<option value=1>1</option>
-				<option value=2>2</option>
-				<option value=3>3</option>
-				<option value=4>4</option>
-				<option value=5>5</option>
-			</select>
-			<input type="submit" value="Add" />
-			<!-- <button onclick="window.location = 'add_product/ + ${product.id}'" type="button" class="btn btn-default">Add</button>  -->
-			</form>
-
+				<form action="add_product/${product.id}" method="GET">
+				Name: ${product.name} Description: ${product.description} Price: <fmt:formatNumber type="currency" value="${product.price}" />
+				<select name="quantity">
+					<option value=1>1</option>
+					<option value=2>2</option>
+					<option value=3>3</option>
+					<option value=4>4</option>
+					<option value=5>5</option>
+				</select>
+				<input type="submit" value="Add" />
+				<!-- <button onclick="window.location = 'add_product/ + ${product.id}'" type="button" class="btn btn-default">Add</button>  -->
+				</form>
 			</div>
+			
+		</div>
 		</div>
 	</c:forEach>
 	

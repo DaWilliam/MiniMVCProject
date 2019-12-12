@@ -40,7 +40,7 @@ public class DBController {
 	@RequestMapping("/confirmation")
 	public void confirmSale()
 	{
-		//	TODO clear cart
+		cdao.deleteCart();
 	}
 	
 	@RequestMapping("/products")
