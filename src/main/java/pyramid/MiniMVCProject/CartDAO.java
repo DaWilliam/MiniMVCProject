@@ -41,7 +41,8 @@ public class CartDAO {
                 c.setName(rs.getString(2));
                 c.setDescription(rs.getString(3));
                 c.setQuantity(rs.getInt(4));
-                c.setCategory(rs.getString(5));
+                c.setPrice(rs.getDouble(5));
+                c.setCategory(rs.getString(6));
                 
                 return c;
             
